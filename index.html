@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9609304d9e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- Counter element -->
+
+    <div class="counter">0%</div>
+
+    <!-- Section toDo-List -->
+    <section class="section-toDoList">
+      <!-- Todo header -->
+      <div class="toDo-box">
+        <h1 class="todo-header">TODO LIST</h1>
+
+        <!-- Todo form / input field -->
+        <div class="form-container">
+          <form class="form-toDo" id="toDoForm" action="#">
+            <div class="form-control">
+              <input id="input" type="text" autocomplete="off" />
+              <label>You can do it!</label>
+              <button class="button-add" type="submit">
+                <i class="fa-plus plus-icon"></i>
+              </button>
+            </div>
+
+            <!-- Options container -->
+            <div class="select-container">
+              <select name="todos" class="select-toDo">
+                <option value="all">All</option>
+                <option value="completed">Done</option>
+                <option value="uncompleted">Not done</option>
+              </select>
+            </div>
+          </form>
+
+          <!-- TODO LIST -->
+          <div class="list-container">
+            <ul class="todos" id="todos"></ul>
+          </div>
+        </div>
+        <!-- Progress bar -->
+        <div class="progress-container">
+          <p class="header-progress">
+            TOP <span>5</span> priorities, <strong>DONE?</strong>
+          </p>
+
+          <div class="progress-box">
+            <div class="progress" id="progress"></div>
+
+            <div class="circle active">
+              <i class="fa-solid fa-circle-play circle-icon"></i>
+            </div>
+            <div class="circle">
+              <i class="fa-solid fa-face-frown circle-icon"></i>
+            </div>
+            <div class="circle">
+              <i class="fa-solid fa-face-meh circle-icon"></i>
+            </div>
+            <div class="circle">
+              <i class="fa-solid fa-face-smile circle-icon"></i>
+            </div>
+            <div class="circle">
+              <i class="fa-solid fa-face-laugh circle-icon"></i>
+            </div>
+            <div class="circle complete">
+              <i class="fa-solid fa-trophy circle-icon"></i>
+            </div>
+          </div>
+
+          <!-- Buttons progress bar -->
+          <button class="btn-progress" id="prev" disabled>Prev</button>
+          <button class="btn-progress" id="next">Next</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
